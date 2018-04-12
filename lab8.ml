@@ -230,9 +230,9 @@ by registering appropriate listeners, one for each news network,
 waiting for the publish event.
 ......................................................................*)
 
-let receive_report (s : string) = WEvent.add_listener publish (fun () -> fakeNewsNetwork s);
-                                  WEvent.add_listener publish (fun () -> buzzFake s); ();;
-
+let receive_report (s : string) = WEvent.add_listener publish (fun () -> fakeNewsNetwork s); () ;;
+(*                                   WEvent.add_listener publish (fun () -> buzzFake s); 
+ *)
 (*......................................................................
 Exercise 10: Register the receieve_report listener to listen for the
 newswire event.
